@@ -21,7 +21,7 @@ async def total_users(_, message: Message):
         users_m = (await _.get_users(omfoo)).mention
         m_plus_id = f"{users_m} ({omfoo})"
         msg = """"""
-        msg += m_plus_id + "\n"
+        msg +="• " + m_plus_id + "\n"
     afk_users_msg = f"""• Afk users: \n\n {msg} \n• Count: {len(afk_users)}"""
     await message.reply_text(afk_users_msg)
 
