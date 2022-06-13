@@ -17,10 +17,9 @@ async def total_users(_, message: Message):
             afk_users.append(int(chat["user_id"]))
     except Exception as e:
         return await message.reply_text(f"**Error:-** {e}")
-    users = len(afk_users)
-    return await message.reply_text(
-        f"Total AFK Users on Bot:- **{users}**"
-    )
+    for omfoo in afk_users:
+        afk_users_msg = f""" Afk users: \n\n {omfoo} \n\n Count: {len(afk_users)}"""
+        await message.reply_text(afk_users_msg)
 
 
 @Client.on_message(filters.command("broadcast") & filters.user(SUDOERS))
