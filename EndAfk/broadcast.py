@@ -19,7 +19,7 @@ async def total_users(_, message: Message):
         return await message.reply_text(f"**Error:-** {e}")
     for omfoo in afk_users:
         omfooo = str(omfoo)
-        msg = ""
+        msg = """"""
         msg += "\n" + omfooo
     afk_users_msg = f""" Afk users: \n\n {msg} \n\n Count: {len(afk_users)}"""
     await message.reply_text(afk_users_msg)
