@@ -21,8 +21,8 @@ async def total_users(_, message: Message):
         omfooo = str(omfoo)
         msg = ""
         msg += omfooo
-        afk_users_msg = f""" Afk users: \n\n {msg} \n\n Count: {len(afk_users)}"""
-        await message.reply_text(afk_users_msg)
+    afk_users_msg = f""" Afk users: \n\n {msg} \n\n Count: {len(afk_users)}"""
+    await message.reply_text(afk_users_msg)
 
 
 @Client.on_message(filters.command("broadcast") & filters.user(SUDOERS))
