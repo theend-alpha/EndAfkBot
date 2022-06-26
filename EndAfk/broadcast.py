@@ -44,9 +44,9 @@ async def broadcast(_, message):
         chats.append(int(chat["chat_id"]))
     for i in chats:
         try:
-            await app.forward_messages(
+            await _.forward_messages(
                 i, y, x
-            ) if message.reply_to_message else await app.send_message(
+            ) if message.reply_to_message else await _.send_message(
                 i, text=query
             )
             sent += 1
